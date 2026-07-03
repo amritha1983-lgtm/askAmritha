@@ -1,0 +1,426 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "background": "#F8F3EA", // Warm Cream
+                "surface": "#F8F3EA", // Warm Cream
+                "surface-bright": "#F8F3EA",
+                "on-surface": "#1F1C1A", // Deep Charcoal
+                "on-background": "#1F1C1A",
+                "primary": "#3A2A22", // Espresso Brown
+                "on-primary": "#ffffff",
+                "secondary": "#CFA8A3", // Dusty Rose
+                "accent": "#C6A15B", // Muted Gold
+                "section-bg": "#EFE2D0", // Soft Beige
+                "card-bg": "#FFFDFC", // Ivory White
+                "card-border": "#D8C7B2", // Light Taupe
+                "on-surface-variant": "#4E4639",
+                "outline-variant": "#D8C7B2"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-md": "24px",
+                "unit": "8px",
+                "gutter": "24px",
+                "stack-lg": "48px",
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "margin-mobile": "20px",
+                "stack-sm": "12px"
+            },
+            "fontFamily": {
+                "headline-md": ["Playfair Display"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Playfair Display"],
+                "label-caps": ["Inter"],
+                "title-lg": ["Inter"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "title-lg": ["20px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    }catch(_e){}</script></head><body class="selection:bg-accent selection:text-white font-body-md overflow-x-hidden">
+<!-- 1. Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-background/90 backdrop-blur-md shadow-[0_10px_30px_rgba(31,28,26,0.05)]">
+    <div class="flex items-center">
+        <div class="h-10 w-auto flex items-center">{{DATA:DOCUMENT:DOCUMENT_3}}</div>
+    </div>
+    <nav class="hidden md:flex items-center gap-10">
+        <a class="font-label-caps text-label-caps text-accent font-bold hover:opacity-80 transition-opacity" href="#">Home</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-accent transition-colors" href="#services">Services</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-accent transition-colors" href="#portfolio">Portfolio</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-accent transition-colors" href="#pricing">Pricing</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-accent transition-colors" href="#contact">Contact</a>
+    </nav>
+    <button class="bg-primary hover:opacity-90 text-white px-6 py-3 rounded-full font-label-caps text-label-caps transition-soft active:scale-95 shadow-lg shadow-primary/20">
+        Trial Pack
+    </button>
+</header>
+
+<main class="pt-20">
+    <!-- 2. Hero Section -->
+    <section class="relative min-h-[870px] flex items-center px-margin-desktop overflow-hidden bg-background">
+        <div class="grid grid-cols-12 gap-gutter container-max mx-auto items-center">
+            <!-- Left Content -->
+            <div class="col-span-12 lg:col-span-6 flex flex-col gap-stack-md z-10">
+                <div class="flex flex-col gap-stack-sm">
+                    <span class="font-label-caps text-label-caps text-accent tracking-[0.2em]">ARTISANAL AI STUDIO</span>
+                    <h1 class="font-display-lg text-display-lg text-on-surface leading-tight max-w-xl">
+                        Premium Product Photos &amp; Ad Creatives Without <span class="italic text-accent">Expensive Photoshoots</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-4">
+                        Elevate your brand story with editorial-grade photography generated by AI, specifically tailored for luxury skincare, jewelry, and lifestyle brands.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <button class="bg-primary text-white px-8 py-4 rounded-full font-label-caps text-label-caps hover:opacity-90 transition-soft shadow-xl shadow-primary/10">
+                        View Portfolio
+                    </button>
+                    <button class="border border-primary text-primary px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-primary hover:text-white transition-soft">
+                        Get a Trial Pack
+                    </button>
+                </div>
+            </div>
+            <!-- Right Visual -->
+            <div class="col-span-12 lg:col-span-6 relative">
+                <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-[0_30px_60px_rgba(31,28,26,0.08)] group">
+                    <div class="absolute inset-0 bg-[#EFE2D0] transition-soft group-hover:scale-105 duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwFuaF7ObIWY0fSalMIF4FXZNXk7Y820GuASnU4dY85wkoh-rlNz-JmhBfqc7XFhjb0SGc-tMiPo1R_AKJryBog-KbTQ8lR6Nhr4k6X5Ip2tC0HMKADHtB8Dwyf5KhKKgwc7-HqY5YKJm8VdQB21pdz4MNax42pDdyhj8DCmPjrl2nunn5wOck_1rgManZ-nPNEnuVd_F7zPGFqt6oJQL9P_76n0AyoxyzwO0u-MyZjJIJCC5bdTSft0cwS89_djR3NZV_lGM_Il8')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-6 -left-6 bg-card-bg p-6 rounded-xl shadow-2xl z-20 flex flex-col gap-2 max-w-[200px] border border-card-border">
+                    <span class="font-label-caps text-[10px] text-accent">LUXURY STANDARD</span>
+                    <span class="font-title-lg text-on-surface">4K Editorial Resolution</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Trust Strip -->
+    <section class="py-12 border-y border-card-border bg-section-bg">
+        <div class="max-w-7xl mx-auto px-margin-desktop flex flex-wrap justify-between items-center gap-8 md:gap-4">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-accent">apartment</span>
+                <span class="font-label-caps text-label-caps text-on-surface/70">No studio needed</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-accent">person_off</span>
+                <span class="font-label-caps text-label-caps text-on-surface/70">No model shoot needed</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-accent">bolt</span>
+                <span class="font-label-caps text-label-caps text-on-surface/70">Fast delivery</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-accent">photo_camera</span>
+                <span class="font-label-caps text-label-caps text-on-surface/70">Instagram-ready</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Who We Help -->
+    <section class="py-stack-lg px-margin-desktop bg-background">
+        <div class="container-max mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-accent mb-4 block">DOMAINS OF CRAFT</span>
+                <h2 class="font-headline-md text-headline-md text-on-surface">Bespoke Solutions for Artisans</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <!-- Skincare -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl shadow-[0_20px_40px_rgba(31,28,26,0.05)] cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-soft group-hover:scale-110 duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfBLk0JqdscJ46UsRnwP0FWPXKfU0EDMFKDaBe8-QZ1a59SRSmthSxWuCPe7hXiCqNjQa3_U7iFkDLcoJqj3f1yTenL2EA8pjAfLwxiVsYuh0uA9Txlmob_1PMlRkeSzVJixcCdRt8lRfg24VOCsgPDT1L9FHkVPANKu5e7bTuFm3_m5ASntQ-t-jJcKVUNW46bLfGJoTM3wkfvZ93OcGpaUfgR1Ffb1Ls2griEm0FAE3gZi7w9xDrIw5a-RDfsNHZJ283p_j22lc')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <span class="font-label-caps text-[10px] opacity-80">CATEGORY</span>
+                        <h3 class="font-title-lg text-title-lg">Skincare</h3>
+                    </div>
+                </div>
+                <!-- Jewelry -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl shadow-[0_20px_40px_rgba(31,28,26,0.05)] cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-soft group-hover:scale-110 duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5URHTxc8gmQqLbr9khIehpEomE3BXQjyxhcWiE-BbSiJC5vXKriaMnhOQQD-2st38oOsEZQuiI6fpu9bI5tShQJP3EN6oxyP0ErcODuduUoEpg6-c1A7-hvpaiLkZRDGPcXts0KLUikYQEAnUP_s1Cb6uIGQXHsdKXqZsL0VBvbhNMOD21lAU6k-uPvn1W4K4yPGo3T3sMaIXmmBMDPmGTCzu7wlPVC4WB1RTA6dyJuTJFfQt0L0YB3A1vIMURkdG9-f6wwX_ErA')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <span class="font-label-caps text-[10px] opacity-80">CATEGORY</span>
+                        <h3 class="font-title-lg text-title-lg">Jewelry</h3>
+                    </div>
+                </div>
+                <!-- Perfume -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl shadow-[0_20px_40px_rgba(31,28,26,0.05)] cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-soft group-hover:scale-110 duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhrqKNeOGn0wcvGJakTCOg2kLEMTtZdECRFcVETV9AqgNatverkOft8l757rTyE846hGC0tkxLPCf7gBKBtdAczQEHSlcljd5J_qzSMe3iQ0skaW47J2cTK3SwCkTwCoW6rZwq-uNQfoSV6qkHeaZFQ76MFstQaC-mkjyzkKuEe0rMEzQ3n4Glx8tVhOfuW-RI15XpT691JPEGHvX-vCVZtEzr3PVBERxoCUxc05pL6uCIDYClqmEVL-Iy0oBj4mTrDcaRBPshJro')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <span class="font-label-caps text-[10px] opacity-80">CATEGORY</span>
+                        <h3 class="font-title-lg text-title-lg">Perfume</h3>
+                    </div>
+                </div>
+                <!-- Wellness -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-xl shadow-[0_20px_40px_rgba(31,28,26,0.05)] cursor-pointer">
+                    <div class="absolute inset-0 bg-cover bg-center transition-soft group-hover:scale-110 duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQhjItt-tgATMyVkbFe-VhRu9GZBZxh2qtGgRYg78Z0Cg_NktSgL7p7ouU96_kQae3JqkRrm0NupHZyWeVQ-qTA0Qb-0Jko3RgacitR-Sw1mprkP48mX74JeL7kzxoIPUP2TLpKBf9IgLcRWbuLnO4BU6OwJ8sEFJQGB5Sd8d11Ok7VHv7OkqCdrLcB2h-t3z4GxK_0hw_PfudCbbBXTGZ6asWLhJeStUP_tS8rqDa6RPs3PEqmcdIcRprM1QZZTmx_W4Zo0Irdis')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <span class="font-label-caps text-[10px] opacity-80">CATEGORY</span>
+                        <h3 class="font-title-lg text-title-lg">Lifestyle</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. What We Create -->
+    <section class="py-stack-lg px-margin-desktop bg-section-bg" id="services">
+        <div class="container-max mx-auto">
+            <div class="grid grid-cols-12 gap-gutter">
+                <div class="col-span-12 lg:col-span-4 flex flex-col justify-center">
+                    <span class="font-label-caps text-label-caps text-accent mb-4">OUR SERVICES</span>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Expertly Crafted AI Creatives</h2>
+                    <p class="font-body-md text-on-surface-variant mb-8">We combine the precision of AI with the soul of artisanal design to produce visuals that sell.</p>
+                    <a class="text-accent font-label-caps text-label-caps border-b border-accent w-fit pb-1 hover:opacity-70 transition-opacity" href="#">Full Capabilities</a>
+                </div>
+                <div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- AI Photography -->
+                    <div class="bg-card-bg p-8 rounded-xl shadow-sm border border-card-border hover:-translate-y-2 transition-soft">
+                        <span class="material-symbols-outlined text-4xl text-accent mb-6">camera</span>
+                        <h3 class="font-title-lg text-title-lg mb-3">AI Photography</h3>
+                        <p class="font-body-md text-on-surface-variant text-sm">Hyper-realistic product images in any setting you can imagine. No shipping required.</p>
+                    </div>
+                    <!-- Ad Creatives -->
+                    <div class="bg-card-bg p-8 rounded-xl shadow-sm border border-card-border hover:-translate-y-2 transition-soft">
+                        <span class="material-symbols-outlined text-4xl text-accent mb-6">ads_click</span>
+                        <h3 class="font-title-lg text-title-lg mb-3">Ad Creatives</h3>
+                        <p class="font-body-md text-on-surface-variant text-sm">High-converting social media ads designed to stop the scroll and drive engagement.</p>
+                    </div>
+                    <!-- Content Packs -->
+                    <div class="bg-card-bg p-8 rounded-xl shadow-sm border border-card-border hover:-translate-y-2 transition-soft">
+                        <span class="material-symbols-outlined text-4xl text-accent mb-6">auto_awesome_motion</span>
+                        <h3 class="font-title-lg text-title-lg mb-3">Content Packs</h3>
+                        <p class="font-body-md text-on-surface-variant text-sm">Monthly bundles of curated content for consistent, premium brand storytelling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Before/After Section -->
+    <section class="py-stack-lg px-margin-desktop bg-background">
+        <div class="container-max mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-accent mb-4 block">THE TRANSFORMATION</span>
+                <h2 class="font-headline-md text-headline-md text-on-surface">Studio Quality, Zero Setup</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                <!-- Before -->
+                <div class="relative rounded-xl overflow-hidden shadow-lg">
+                    <div class="absolute top-4 left-4 bg-on-surface/50 text-white font-label-caps text-[10px] px-3 py-1 rounded-full backdrop-blur-md">YOUR PHOTO</div>
+                    <div class="w-full aspect-square bg-[#EFE2D0]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0dv5tHqglYV6bZTY76cREdQ7fAdeRYN9WG2DlUeEdIlxrYUR2NI7bdmpkkkxFxED2ovwIYZL2IL_iwy6zNqmJoBTkurIx0KvqZ_QQGfHEXemy_vCHS_XOSVi6o98M8qwPhmNDAVptRnKYgLt74iZUHRzxPc1F2b6opzWRwnFhuvcVDmKvoP2wtFDLOxQZpS7QXDedHjT5S9eehxWz7351pM3receTuEPugB9q8jgnQLysggaUAQVUk1pxndtmb_yXKMPbtHf4ego')"></div>
+                </div>
+                <!-- After -->
+                <div class="relative rounded-xl overflow-hidden shadow-2xl scale-105 z-10 ring-4 ring-accent/20">
+                    <div class="absolute top-4 left-4 bg-accent text-white font-label-caps text-[10px] px-3 py-1 rounded-full">ASKAMRITHA AI</div>
+                    <div class="w-full aspect-square bg-section-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcDadm-x2k_CkURaE7FmLgqKUpWJJcImM9mUCr1eFAPzDfoQ1PG7c23xWOjR4dHrIz4RABdSb_vI1d_EGi5UxPhWB6COvvN0KcA4q1nsklkTTGfjYGB0yVAeNjrJFnOQHRynj9BoewT7SYzBBfNOXSwMsg0qq9vKW9Sd0NYsfQ6nREc-sbukLT6iPSZkHCvePTAb71yxeBLn-iCayx2RYJL0MmZJxcNU3CqYbNqHOMLR-onwvhtJecUdodOGPRLuiAwxkMmA9OCjQ')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Packages Section -->
+    <section class="py-stack-lg px-margin-desktop bg-section-bg" id="pricing">
+        <div class="container-max mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-accent mb-4 block">INVEST IN YOUR BRAND</span>
+                <h2 class="font-headline-md text-headline-md text-on-surface">Curated Service Packages</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Trial Pack -->
+                <div class="bg-card-bg border-2 border-accent p-8 rounded-2xl flex flex-col gap-6 relative shadow-xl">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[10px] font-label-caps px-4 py-1 rounded-full">POPULAR CHOICE</div>
+                    <h3 class="font-title-lg text-title-lg">Trial Pack</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-bold">₹999</span>
+                        <span class="text-on-surface-variant text-sm">/one-time</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> 3 Premium AI Photos</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> 4K Resolution</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> 48h Delivery</li>
+                    </ul>
+                    <button class="mt-auto w-full py-3 rounded-full bg-primary text-white font-label-caps text-label-caps hover:opacity-90 transition-soft">Claim Now</button>
+                </div>
+                <!-- Starter -->
+                <div class="bg-card-bg p-8 rounded-2xl flex flex-col gap-6 shadow-sm border border-card-border hover:shadow-md transition-soft">
+                    <h3 class="font-title-lg text-title-lg">Essential</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-bold">₹4,999</span>
+                        <span class="text-on-surface-variant text-sm">/pack</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> 15 Premium AI Photos</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> Mix of Styles</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> Dedicated Editor</li>
+                    </ul>
+                    <button class="mt-auto w-full py-3 rounded-full border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-white transition-soft">Select Pack</button>
+                </div>
+                <!-- Growth -->
+                <div class="bg-card-bg p-8 rounded-2xl flex flex-col gap-6 shadow-sm border border-card-border hover:shadow-md transition-soft">
+                    <h3 class="font-title-lg text-title-lg">Brand Growth</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-bold">₹12,499</span>
+                        <span class="text-on-surface-variant text-sm">/pack</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> 40 AI Photos</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> 5 Video Creatives</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> Priority Lane</li>
+                    </ul>
+                    <button class="mt-auto w-full py-3 rounded-full border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-white transition-soft">Select Pack</button>
+                </div>
+                <!-- Enterprise -->
+                <div class="bg-card-bg p-8 rounded-2xl flex flex-col gap-6 shadow-sm border border-card-border hover:shadow-md transition-soft">
+                    <h3 class="font-title-lg text-title-lg">Bespoke</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-3xl font-bold text-on-surface">Custom</span>
+                    </div>
+                    <p class="font-body-md text-sm text-on-surface-variant">Perfect for large catalogs and recurring monthly content needs.</p>
+                    <ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> Unlimited Assets</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined text-sm text-accent">check_circle</span> Custom Training</li>
+                    </ul>
+                    <button class="mt-auto w-full py-3 rounded-full border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-white transition-soft">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. How It Works -->
+    <section class="py-stack-lg px-margin-desktop bg-background">
+        <div class="container-max mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-accent mb-4 block">THE PROCESS</span>
+                <h2 class="font-headline-md text-headline-md text-on-surface">From Click to Conversion</h2>
+            </div>
+            <div class="relative">
+                <!-- Progress Line -->
+                <div class="hidden lg:block absolute top-10 left-[10%] right-[10%] h-[1px] bg-card-border/50 z-0"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative z-10">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center gap-6 group">
+                        <div class="w-20 h-20 bg-section-bg rounded-full flex items-center justify-center text-accent group-hover:scale-110 transition-soft ring-8 ring-background border border-card-border">
+                            <span class="material-symbols-outlined text-3xl">upload_file</span>
+                        </div>
+                        <div>
+                            <h3 class="font-title-lg text-on-surface mb-2">Upload</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant">Send us basic phone photos of your products.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center gap-6 group">
+                        <div class="w-20 h-20 bg-section-bg rounded-full flex items-center justify-center text-accent group-hover:scale-110 transition-soft ring-8 ring-background border border-card-border">
+                            <span class="material-symbols-outlined text-3xl">palette</span>
+                        </div>
+                        <div>
+                            <h3 class="font-title-lg text-on-surface mb-2">Consult</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant">Choose your theme, mood, and brand aesthetic.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center gap-6 group">
+                        <div class="w-20 h-20 bg-section-bg rounded-full flex items-center justify-center text-accent group-hover:scale-110 transition-soft ring-8 ring-background border border-card-border">
+                            <span class="material-symbols-outlined text-3xl">auto_fix</span>
+                        </div>
+                        <div>
+                            <h3 class="font-title-lg text-on-surface mb-2">Transform</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant">Our AI artisans craft your editorial images.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-center text-center gap-6 group">
+                        <div class="w-20 h-20 bg-section-bg rounded-full flex items-center justify-center text-accent group-hover:scale-110 transition-soft ring-8 ring-background border border-card-border">
+                            <span class="material-symbols-outlined text-3xl">task_alt</span>
+                        </div>
+                        <div>
+                            <h3 class="font-title-lg text-on-surface mb-2">Deliver</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant">Receive high-res files ready for social &amp; ads.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Final CTA -->
+    <section class="py-stack-lg px-margin-desktop bg-section-bg relative overflow-hidden" id="contact">
+        <div class="container-max mx-auto relative z-10 text-center max-w-3xl">
+            <h2 class="font-display-lg text-display-lg text-on-surface mb-8">Ready to make your product look premium online?</h2>
+            <p class="font-body-lg text-on-surface-variant mb-12">Stop wasting thousands on studio rentals and photographers. Get artisanal quality at AI speed.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a class="bg-[#25D366] text-white px-10 py-5 rounded-full font-label-caps text-label-caps flex items-center gap-3 hover:scale-105 transition-soft shadow-xl" href="#">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.63 1.438h.008c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" class=""></path></svg>
+                    WhatsApp Now
+                </a>
+                <button class="bg-primary text-white px-10 py-5 rounded-full font-label-caps text-label-caps hover:opacity-90 transition-soft shadow-xl">
+                    Schedule a Demo
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 10. Footer -->
+<footer class="w-full px-margin-desktop py-stack-lg flex flex-col gap-stack-md bg-background text-on-surface">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter border-b border-card-border pb-stack-lg">
+        <div class="md:col-span-4 flex flex-col gap-6">
+            <div class="h-10 w-auto flex items-center mb-4">{{DATA:DOCUMENT:DOCUMENT_3}}</div>
+            <p class="font-body-md text-on-surface-variant max-w-xs">Elevating artisanal brands with the world's most sophisticated AI photography engine.</p>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full bg-section-bg flex items-center justify-center hover:bg-primary hover:text-white transition-soft group" href="#">
+                    <span class="material-symbols-outlined text-accent group-hover:text-white">public</span>
+                </a>
+                <a class="w-10 h-10 rounded-full bg-section-bg flex items-center justify-center hover:bg-primary hover:text-white transition-soft group" href="#">
+                    <span class="material-symbols-outlined text-accent group-hover:text-white">share</span>
+                </a>
+            </div>
+        </div>
+        <div class="md:col-span-2 flex flex-col gap-4">
+            <span class="font-label-caps text-label-caps text-accent">Services</span>
+            <a class="font-body-md text-on-surface-variant hover:text-accent transition-colors" href="#">AI Photography</a>
+            <a class="font-body-md text-on-surface-variant hover:text-accent transition-colors" href="#">Ad Creatives</a>
+            <a class="font-body-md text-on-surface-variant hover:text-accent transition-colors" href="#">Content Strategy</a>
+        </div>
+        <div class="md:col-span-2 flex flex-col gap-4">
+            <span class="font-label-caps text-label-caps text-accent">Company</span>
+            <a class="font-body-md text-on-surface-variant hover:text-accent transition-colors" href="#">Pricing</a>
+            <a class="font-body-md text-on-surface-variant hover:text-accent transition-colors" href="#">Portfolio</a>
+            <a class="font-body-md text-on-surface-variant hover:text-accent transition-colors" href="#">Contact</a>
+        </div>
+        <div class="md:col-span-4 flex flex-col gap-4">
+            <span class="font-label-caps text-label-caps text-accent">Contact</span>
+            <p class="font-body-md text-on-surface-variant">workshop@askamritha.com</p>
+            <p class="font-body-md text-on-surface-variant">+91 (800) 456-7890</p>
+            <p class="font-body-md text-on-surface-variant">The Artisanal District, Mumbai</p>
+        </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-6">
+        <span class="font-label-caps text-label-caps text-on-surface/50">© 2024 AskAmritha. Artisanal Excellence.</span>
+        <div class="flex gap-8">
+            <a class="font-label-caps text-label-caps text-on-surface/50 hover:text-accent transition-colors" href="#">Privacy</a>
+            <a class="font-label-caps text-label-caps text-on-surface/50 hover:text-accent transition-colors" href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<script class="">
+    document</script></body></html>
