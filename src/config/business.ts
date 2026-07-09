@@ -7,10 +7,10 @@ export const BUSINESS_CONFIG = {
   email: "info@askamritha.com",
   phone: "+91 85916 26408",
   address: "India",
-  domain: "askamritha.com",
+  domain: "www.askamritha.com",
   socials: {
-    instagram: "https://instagram.com/askamritha",
-    facebook: "https://facebook.com/askamritha",
+    instagram: "https://www.instagram.com/askamritha/",
+    facebook: "https://www.facebook.com/profile.php?id=61591658587008",
     pinterest: "https://pinterest.com/askamritha",
   },
   services: [
