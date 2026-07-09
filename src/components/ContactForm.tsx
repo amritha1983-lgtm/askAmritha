@@ -52,19 +52,43 @@ export default function ContactForm() {
 
     setStatus("submitting");
 
-    // Simulate API call - ready to connect to Formspree, Resend, EmailJS, or API route
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
-      setFormData({
-        name: "",
-        businessName: "",
-        email: "",
-        phone: "",
-        service: "Trial Pack",
-        message: "",
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "59d85fd3-8f46-48b4-8478-bd32b9da1ef3",
+          subject: `New Enquiry from ${formData.name} (${formData.businessName})`,
+          from_name: formData.name,
+          name: formData.name,
+          businessName: formData.businessName,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+        }),
       });
-    } catch {
+
+      const resData = await response.json();
+
+      if (response.status === 200 && resData.success) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          businessName: "",
+          email: "",
+          phone: "",
+          service: "Trial Pack",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
       setStatus("error");
     }
   };
